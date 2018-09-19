@@ -3,7 +3,9 @@
 pub extern crate ipp_ctypes;
 extern crate ipp_headers_sys;
 extern crate link_ippcore;
+extern crate link_ippvm;
 extern crate link_ippcv;
+extern crate link_ippcc;
 extern crate link_ippi;
 extern crate link_ipps;
 

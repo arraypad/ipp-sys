@@ -1,10 +1,9 @@
 [package]
-name = "link-ippcv"
-description = "link ippcv library (part of ipp-sys Intel IPP bindings)"
+name = "link-ippcc"
+description = "link ippcc library (part of ipp-sys Intel IPP bindings)"
 version = "0.1.1"
 authors = ["Andrew Straw <strawman@astraw.com>"]
 build = "build.rs"
-links = "libippcv"
 repository = "https://github.com/astraw/ipp-sys"
 license = "MIT/Apache-2.0"
 categories = ["external-ffi-bindings"]

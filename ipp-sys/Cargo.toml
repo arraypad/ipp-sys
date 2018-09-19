@@ -12,6 +12,8 @@ readme = "README.md"
 ipp-ctypes = { version = "0.1", path = "../ipp-ctypes" }
 ipp-headers-sys = { version = "0.3", path = "../ipp-headers-sys" }
 link-ippcore = { version = "0.1", path = "../link-ippcore" }
+link-ippvm = { version = "0.1", path = "../link-ippvm" }
 link-ippcv = { version = "0.1", path = "../link-ippcv" }
+link-ippcc = { version = "0.1", path = "../link-ippcc" }
 link-ippi = { version = "0.1", path = "../link-ippi" }
 link-ipps = { version = "0.1", path = "../link-ipps" }
