@@ -66,3 +66,36 @@ fn test_link_ipps() {
     assert!(dest[0]==1.23);
     println!("ipps OK");
 }
+
+#[test]
+fn test_link_ippcc() {
+    let mut values: [ipp::Ipp8u; 3] = [
+        1u8, 1u8, 1u8,
+    ];
+
+    let step = 3;
+    let size = ipp::IppiSize { width: 1, height: 1 };
+
+    ipp_assert!(ipp::ippiGammaFwd_8u_C3IR(values.as_mut_ptr(), step, size));
+    assert!(values[0] == 4);
+    println!("ippcc OK");
+}
+
+#[test]
+fn test_link_ippvm() {
+    // sample from https://software.intel.com/en-us/ipp-dev-reference-abs-1
+
+    use ipp::{Ipp32f, Ipp32fc};
+
+    let x: [Ipp32fc; 2] = [
+        Ipp32fc { re: 2.885,  im: -1.809 },
+        Ipp32fc { re: -0.543, im: -2.809 },
+    ];
+
+    let mut y: [Ipp32f; 2] = [0f32 as Ipp32f; 2];
+
+    ipp_assert!(ipp::ippsAbs_32fc_A24(x.as_ptr(), y.as_mut_ptr(), 2));
+    assert!(format!("{:+.*}", 3, y[0]) == "+3.405");
+    assert!(format!("{:+.*}", 3, y[1]) == "+2.861");
+    println!("ippvm OK");
+}
