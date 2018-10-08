@@ -13,4 +13,4 @@ build = "build.rs"
 ipp-ctypes = { version = "0.1", path = "../ipp-ctypes" }
 
 [build-dependencies]
-bindgen = "0.35"
+bindgen = "0.40"
