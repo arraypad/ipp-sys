@@ -52,7 +52,7 @@ fn ipp_build_inner(libname: String, libdir_base: PathBuf, target: String, link_t
                 libdir = libdir.join("intel64");
             }
         }
-        "x86_64-unknown-linux-gnu" => {
+        "x86_64-unknown-linux-gnu" | "x86_64-unknown-linux-musl" => {
             libdir = libdir.join("intel64");
         }
         "x86_64-pc-windows-msvc" => {
